@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+.main {
+  min-height: 100vh;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  margin: 0 auto;
+  border: 2px #eee solid;
+  background-color: #2f339d;
+}
+
+.mainTitle {
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  color: #eee;
+  background-color: #181818;
+  font-family: 'Gowun Dodum';
+}
+
+.mainTitle p {
+  font-size: 1.4rem;
+}
+
+.mainTitle a {
+  font-size: 1.1rem;
+  border: 1px #fff solid;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.mainTitle a:hover {
+  background-color: #eee;
+}
