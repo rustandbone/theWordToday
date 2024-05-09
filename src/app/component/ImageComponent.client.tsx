@@ -5,6 +5,7 @@ import { usePalette } from 'color-thief-react';
 
 export default function ImageComponent({ src }: { src: string }) {
   const { data } = usePalette(src, 2, 'hex');
+  const imgAlt = src.split('.')[0].replace('/', '');
 
   if (data) {
     return (
@@ -16,7 +17,7 @@ export default function ImageComponent({ src }: { src: string }) {
       >
         <Image
           src={src}
-          alt="이 생명의 말씀을 다 백성에게"
+          alt={imgAlt}
           fill
           style={{ objectFit: 'contain' }}
           priority={true}
