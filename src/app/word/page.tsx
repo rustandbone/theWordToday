@@ -18,5 +18,5 @@ export default function Word() {
     setImageUrl(wordImages[index]);
   }, []);
 
-  return <ImageComponent src={imageUrl} />;
+  return <ImageComponent src={`/word${imageUrl}`} />;
 }
