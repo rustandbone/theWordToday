@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: '오늘의 말씀과 함께 하루를',
     images: [
       {
-        url: 'https://the-word-today.vercel.app/word/%EC%B2%A0%EC%9D%84%20%EB%94%B0%EB%9D%BC%20%EA%BC%B4%EC%9D%84%20%EB%A8%B9%EC%97%AC%EC%A3%BC%EC%8B%9C%EB%8B%88.png',
+        url: 'https://the-word-today.vercel.app/opengraph-image.png',
         width: 800,
         height: 800,
       },
