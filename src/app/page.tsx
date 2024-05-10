@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import styles from '@/app/page.module.css';
 import { FaQuestionCircle } from 'react-icons/fa';
+import { WORD_TITLE } from '@/app/constants';
 
 export default function Home() {
   return (
     <main className={styles.mainTitle}>
       <section className={styles.section}>
-        <h1>당일말씀</h1>
+        <h1>{WORD_TITLE}</h1>
         <p>
           하루를 살아가기 위한,
           <br />
