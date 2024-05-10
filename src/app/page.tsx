@@ -35,7 +35,7 @@ export default function Home() {
               매일 새로운 말씀이 등장합니다.
               <br />
               <br />
-              하루를 온전히 살아가기 위해
+              하루를 온전히 살아가기 위한
               <br />
               당일말씀과 함께 하세요!
               <br />
@@ -48,12 +48,13 @@ export default function Home() {
               <br />
               <br />
               <span className={styles.infoSource}>
-                출처 : 당일말씀 인스타그램(하단 링크 참조)
+                이미지 출처 : 당일말씀 인스타그램
               </span>
               <a
                 target="_blank"
                 href="https://www.instagram.com/the.sole.mediocrity?utm_source=qr"
                 className={styles.instaLink}
+                rel="noopener noreferrer"
               >
                 <FaInstagram />
               </a>
