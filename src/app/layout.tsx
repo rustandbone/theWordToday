@@ -9,11 +9,13 @@ export const metadata: Metadata = {
   title: '당일말씀',
   description: '오늘의 말씀과 함께 하루를',
   icons: {
-    icon: '/word.ico',
+    icon: '/favicon.png',
   },
   openGraph: {
     title: '당일말씀',
     description: '오늘의 말씀과 함께 하루를',
+    url: 'https://the-word-today.vercel.app/',
+    type: 'website',
     images: [
       {
         url: 'https://the-word-today.vercel.app/opengraph-image.png',
