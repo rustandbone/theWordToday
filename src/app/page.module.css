@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.8rem;
-  width: 340px;
+  width: 400px;
   height: 600px;
   border-radius: 20px;
   margin: 0 auto;
@@ -158,4 +158,10 @@
   color: #181818;
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 400px) {
+  .section {
+    width: 340px;
+  }
 }
