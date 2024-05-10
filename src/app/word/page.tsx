@@ -1,5 +1,4 @@
 'use client';
-import Head from 'next/head';
 import ImageComponent from '@/app/component/ImageComponent.client';
 import { wordImages } from '@/app/data';
 import { useEffect, useState } from 'react';
@@ -19,20 +18,5 @@ export default function Word() {
     setImageUrl(wordImages[index]);
   }, []);
 
-  return (
-    <>
-      <Head>
-        <title>당일말씀</title>
-        <meta name="description" content="오늘의 말씀과 함께 하루를" />
-        <meta property="og:title" content="당일말씀" />
-        <meta property="og:description" content="오늘의 말씀과 함께 하루를" />
-        <meta
-          property="og:image"
-          content={`https://the-word-today.vercel.app/word${imageUrl}`}
-        />
-      </Head>
-
-      <ImageComponent src={`/word${imageUrl}`} />
-    </>
-  );
+  return <ImageComponent src={`/word${imageUrl}`} />;
 }

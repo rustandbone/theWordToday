@@ -19,10 +19,13 @@
   margin: 0 auto;
   border: 2px #eee solid;
   background-color: #2f339d;
+  position: relative;
 }
 
 .mainTitle {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   max-width: 1080px;
   min-height: 100vh;
@@ -40,10 +43,41 @@
 .mainTitle a {
   font-size: 1.1rem;
   border: 1px #fff solid;
-  padding: 5px 10px;
+  padding: 5px 10px 9px;
   border-radius: 5px;
 }
 
 .mainTitle a:hover {
   background-color: #eee;
+}
+
+.info {
+  position: absolute;
+  bottom: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.infoIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.icons {
+  width: 150px;
+  padding: 10px;
+  position: absolute;
+  bottom: 2.5rem;
+  left: calc(50% - 100px);
+  backdrop-filter: contrast(0.3);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.icon {
+  color: #181818;
+  width: 30px;
+  height: 30px;
 }

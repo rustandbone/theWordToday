@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from '@/app/page.module.css';
+import { FaQuestionCircle } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -12,6 +13,9 @@ export default function Home() {
           오늘의 말씀.
         </p>
         <Link href="/word">✅</Link>
+        <button type="button" className={styles.info}>
+          <FaQuestionCircle className={styles.infoIcon} />
+        </button>
       </section>
     </main>
   );
