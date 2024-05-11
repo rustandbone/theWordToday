@@ -37,10 +37,6 @@ export default function ImageComponent({ src }: { src: string }) {
     document.body.appendChild(imageLink);
     imageLink.click();
     document.body.removeChild(imageLink);
-
-    toast.success('당일말씀 이미지가 저장되었습니다.', {
-      id: 'download',
-    });
   };
 
   const sharePage = () => {
