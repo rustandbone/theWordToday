@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Gowun_Dodum } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { WORD_URL, WORD_TITLE, WORD_DESCRIPTION } from '@/app/constants';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const gowunDodum = Gowun_Dodum({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(WORD_URL),
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body className={gowunDodum.className}>
         <Toaster
           toastOptions={{
             style: {
