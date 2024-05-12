@@ -1,0 +1,47 @@
+.main {
+  min-height: 100vh;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.icons {
+  width: 150px;
+  position: absolute;
+  bottom: 2.5rem;
+  left: calc(50% - 75px);
+  background: #fff;
+  /* backdrop-filter: contrast(0.3); */
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.icons.fadeOut {
+  opacity: 0.5;
+}
+
+.icons:hover,
+.icons:focus {
+  transition: opacity 0.8s ease-in-out;
+  opacity: 0.9;
+}
+
+.icons button {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.icons button:hover {
+  background-color: #eee;
+}
+
+.icon {
+  color: #181818;
+  width: 30px;
+  height: 30px;
+}
