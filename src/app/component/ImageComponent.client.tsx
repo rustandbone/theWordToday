@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import styles from '@/app/page.module.css';
+import styles from './image.module.css';
 import toast from 'react-hot-toast';
 import { usePalette } from 'color-thief-react';
 import { FaArrowLeft, FaDownload, FaShare } from 'react-icons/fa';
