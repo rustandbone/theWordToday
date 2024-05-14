@@ -41,6 +41,12 @@
       "src": "/screenshots/word.png",
       "sizes": "919x919",
       "type": "image/png"
+    },
+    {
+      "src": "/screenshots/main_wide.png",
+      "sizes": "1920x919",
+      "type": "image/png",
+      "form_factor": "wide"
     }
   ]
 }
