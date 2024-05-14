@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(WORD_URL),
   title: WORD_TITLE,
   description: WORD_DESCRIPTION,
+  themeColor: '#2f339d',
   icons: {
     icon: '/favicon.png',
   },
