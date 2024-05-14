@@ -6,11 +6,14 @@ import './globals.css';
 
 const gowunDodum = Gowun_Dodum({ weight: '400', subsets: ['latin'] });
 
+export const viewport = {
+  themeColor: '#2f339d',
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(WORD_URL),
   title: WORD_TITLE,
   description: WORD_DESCRIPTION,
-  themeColor: '#2f339d',
   icons: {
     icon: '/favicon.png',
   },
