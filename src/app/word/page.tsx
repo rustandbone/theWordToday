@@ -7,13 +7,18 @@ export default function Word() {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
-    const currentDate = new Date();
-    const startOfYear = new Date(currentDate.getFullYear(), 0, 0);
-    const diff = Number(currentDate) - Number(startOfYear);
-    const oneDay = 1000 * 60 * 60 * 24;
-    const dayOfYear = Math.floor(diff / oneDay);
+    function seededRandom(seed: number) {
+      const x = Math.sin(seed) * 10000;
+      return x - Math.floor(x);
+    }
 
-    const index = dayOfYear % wordImages.length;
+    const currentDate = new Date();
+    const seed =
+      currentDate.getFullYear() * 10000 +
+      (currentDate.getMonth() + 1) * 100 +
+      currentDate.getDate();
+    const random = seededRandom(seed);
+    const index = Math.floor(random * wordImages.length);
 
     setImageUrl(wordImages[index]);
   }, []);
