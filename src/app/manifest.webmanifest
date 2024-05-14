@@ -4,6 +4,7 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
+  "language": "ko-KR",
   "name": "\ub2f9\uc77c\ub9d0\uc500",
   "short_name": "\ub2f9\uc77c\ub9d0\uc500",
   "description": "\ud558\ub8e8\ub97c \uc0b4\uc544\uac00\uae30 \uc704\ud55c, \uc624\ub298\uc758 \ub9d0\uc500.",
@@ -27,6 +28,18 @@
     {
       "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/main.png",
+      "sizes": "919x919",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshots/word.png",
+      "sizes": "919x919",
       "type": "image/png"
     }
   ]
