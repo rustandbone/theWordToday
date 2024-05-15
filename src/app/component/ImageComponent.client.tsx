@@ -26,17 +26,28 @@ export default function ImageComponent({ src }: { src: string }) {
   const imgAlt = src.split('.')[0].replace('/word/', '');
 
   const goBack = () => {
-    router.push('/');
+    router.back();
+  };
+
+  const isIOS = () => {
+    return /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
   };
 
   const downloadImage = () => {
-    const imageLink = document.createElement('a');
-    const imageUrl = src;
-    imageLink.href = imageUrl;
-    imageLink.download = imgAlt;
-    document.body.appendChild(imageLink);
-    imageLink.click();
-    document.body.removeChild(imageLink);
+    if (isIOS()) {
+      toast.success('말씀을 꾸욱 누르면 다운로드가 가능합니다.', {
+        id: 'download',
+        icon: '👇',
+      });
+    } else {
+      const imageLink = document.createElement('a');
+      const imageUrl = src;
+      imageLink.href = imageUrl;
+      imageLink.download = imgAlt;
+      document.body.appendChild(imageLink);
+      imageLink.click();
+      document.body.removeChild(imageLink);
+    }
   };
 
   const sharePage = () => {
