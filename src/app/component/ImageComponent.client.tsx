@@ -6,7 +6,7 @@ import { usePalette } from 'color-thief-react';
 import { FaArrowLeft, FaDownload, FaShare } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
-import { WORD_URL } from '@/app/constants';
+import { WORD_DESCRIPTION, WORD_TITLE, WORD_URL } from '@/app/constants';
 
 export default function ImageComponent({ src }: { src: string }) {
   const { data: colors } = usePalette(src, 2, 'hex');
@@ -54,16 +54,27 @@ export default function ImageComponent({ src }: { src: string }) {
   };
 
   const sharePage = () => {
-    navigator.clipboard
-      .writeText(WORD_URL)
-      .then(() => {
-        toast.success('링크가 클립보드에 복사되었습니다.', {
-          id: 'copy',
+    if (navigator.share) {
+      navigator
+        .share({
+          title: WORD_TITLE,
+          text: WORD_DESCRIPTION,
+          url: WORD_URL,
+        })
+        .then(() => console.log('공유 성공'))
+        .catch((error) => console.log('공유 실패', error));
+    } else {
+      navigator.clipboard
+        .writeText(WORD_URL)
+        .then(() => {
+          toast.success('링크가 클립보드에 복사되었습니다.', {
+            id: 'copy',
+          });
+        })
+        .catch((error) => {
+          console.error('클립보드 복사 실패:', error);
         });
-      })
-      .catch((error) => {
-        console.error('클립보드 복사 실패:', error);
-      });
+    }
   };
 
   if (colors) {
