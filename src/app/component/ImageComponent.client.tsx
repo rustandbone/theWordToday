@@ -58,7 +58,6 @@ export default function ImageComponent({ src }: { src: string }) {
       navigator
         .share({
           title: WORD_TITLE,
-          text: WORD_DESCRIPTION,
           url: WORD_URL,
         })
         .then(() => console.log('공유 성공'))
