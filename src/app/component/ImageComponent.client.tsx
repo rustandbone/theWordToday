@@ -30,7 +30,10 @@ export default function ImageComponent({ src }: { src: string }) {
   };
 
   const isIOS = () => {
-    return /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+    return (
+      /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) &&
+      navigator.maxTouchPoints > 0
+    );
   };
 
   const downloadImage = () => {
