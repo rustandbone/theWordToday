@@ -38,7 +38,7 @@ export default function ImageComponent({ src }: { src: string }) {
 
   const downloadImage = () => {
     if (isIOS()) {
-      toast.success('말씀을 꾸욱 누르면 다운로드가 가능합니다.', {
+      toast.success('말씀을 꾸욱 누르면 다운로드 가능합니다.', {
         id: 'download',
         icon: '👇',
       });

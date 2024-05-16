@@ -10,7 +10,7 @@ export default function Info({ hideArticle }: { hideArticle: () => void }) {
       매일 새로운 말씀이 등장합니다.
       <br />
       <br />
-      하루를 온전히 살아가기 위한
+      하루를 온전히 살아가기 위한,
       <br />
       [당일말씀]과 함께 하세요!
       <br />
