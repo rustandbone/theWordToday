@@ -10,7 +10,9 @@ export default function AppDownload() {
       Android :
       <br />
       1. <FaChrome className={styles.browser} />
-      Chrome에서 주소창 오른편의 [메뉴
+      Chrome에서 주소창 오른편의
+      <br />
+      [메뉴
       <CiMenuKebab />
       ]를 탭합니다.
       <br />
