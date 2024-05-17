@@ -69,6 +69,7 @@
   width: 70%;
   border-radius: 10px;
   padding: 20px;
+  word-break: keep-all;
 }
 
 .infoDetail p {
@@ -120,4 +121,32 @@
   .section {
     width: 340px;
   }
+}
+
+.tabContainer {
+  display: flex;
+}
+
+.tabContainer button {
+  width: 50%;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 5px 0;
+}
+
+.tabContainer button:first-child {
+  border-right: 2px solid #181818;
+}
+
+.tabContainer .activeTab {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.browser {
+  padding-right: 2px;
 }
