@@ -6,7 +6,7 @@ import { usePalette } from 'color-thief-react';
 import { FaArrowLeft, FaDownload, FaShare } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef } from 'react';
-import { WORD_DESCRIPTION, WORD_TITLE, WORD_URL } from '@/app/constants';
+import { WORD_TITLE, WORD_URL } from '@/app/constants';
 
 export default function ImageComponent({ src }: { src: string }) {
   const { data: colors } = usePalette(src, 2, 'hex');
