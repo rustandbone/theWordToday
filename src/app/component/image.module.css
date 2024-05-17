@@ -45,3 +45,16 @@
   width: 25px;
   height: 25px;
 }
+
+@media (max-width: 550px) {
+  .icons {
+    width: 120px;
+    bottom: 5rem;
+    left: calc(50% - 60px);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
