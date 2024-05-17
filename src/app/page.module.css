@@ -151,3 +151,7 @@
 .browser {
   padding-right: 2px;
 }
+
+.browserTitle {
+  color: darkblue;
+}

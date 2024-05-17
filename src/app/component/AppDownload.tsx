@@ -7,7 +7,7 @@ import { FaChrome, FaSafari } from 'react-icons/fa';
 export default function AppDownload() {
   return (
     <p>
-      Android :
+      <span className={styles.browserTitle}>Android :</span>
       <br />
       1. <FaChrome className={styles.browser} />
       Chrome에서 주소창 오른편의
@@ -19,7 +19,7 @@ export default function AppDownload() {
       2. [앱 설치]를 탭합니다.
       <br />
       <br />
-      iOS :
+      <span className={styles.browserTitle}>iOS :</span>
       <br />
       1. <FaChrome className={styles.browser} />
       Chrome 혹은 <FaSafari className={styles.browser} />
@@ -30,7 +30,7 @@ export default function AppDownload() {
       2. [홈 화면에 추가]를 탭합니다.
       <br />
       <br />
-      컴퓨터 :
+      <span className={styles.browserTitle}>컴퓨터 :</span>
       <br />
       <FaChrome className={styles.browser} />
       Chrome에서 주소창 오른편의
