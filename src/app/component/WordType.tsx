@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef } from 'react';
 import { IoClose } from 'react-icons/io5';
+import { FaRegCopy } from 'react-icons/fa';
 import styles from './type.module.css';
 import toast from 'react-hot-toast';
 
@@ -38,9 +39,31 @@ export default function WordType({
     }
   };
 
+  const copyWord = () => {
+    const copyWordForm = [typingWord, quote].join('\n[') + ']';
+
+    navigator.clipboard
+      .writeText(copyWordForm)
+      .then(() => {
+        toast.success('말씀이 클립보드에 복사되었습니다.', {
+          id: 'copyWord',
+        });
+      })
+      .catch((error) => {
+        console.error('클립보드 복사 실패:', error);
+      });
+  };
+
   return (
     <article className={styles.typing}>
-      <div className={styles.typingQuote}>[{quote}]</div>
+      <div className={styles.typingQuote}>
+        [{quote}]
+        <span>
+          <button type="button" className={styles.copyBtn} onClick={copyWord}>
+            <FaRegCopy className={styles.copyIcon} />
+          </button>
+        </span>
+      </div>
       <div className={styles.typingWord}>
         {typingWord.split('').map((char, index) => {
           let charClass = '';
