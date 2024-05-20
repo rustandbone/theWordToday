@@ -33,6 +33,7 @@
   line-height: 1.5;
   max-height: 70vh;
   box-sizing: content-box;
+  font-size: 0.9rem;
 }
 
 .typingArea::-webkit-scrollbar {

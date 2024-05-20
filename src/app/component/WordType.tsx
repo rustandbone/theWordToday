@@ -32,6 +32,7 @@ export default function WordType({
         duration: 4000,
         style: {
           fontWeight: 'bold',
+          marginTop: 'calc(50vh - 43px)',
         },
       });
     }
