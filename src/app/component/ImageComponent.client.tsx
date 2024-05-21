@@ -4,11 +4,20 @@ import styles from './image.module.css';
 import toast from 'react-hot-toast';
 import { usePalette } from 'color-thief-react';
 import { FaArrowLeft, FaDownload, FaShare } from 'react-icons/fa';
+import { FiType } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { WORD_TITLE, WORD_URL } from '@/app/constants';
+import WordType from './WordType';
 
-export default function ImageComponent({ src }: { src: string }) {
+export default function ImageComponent({
+  src,
+  word,
+}: {
+  src: string;
+  word: string;
+}) {
+  const [type, setType] = useState(false);
   const { data: colors } = usePalette(src, 2, 'hex');
   const router = useRouter();
   const articleRef = useRef<HTMLElement | null>(null);
@@ -76,6 +85,10 @@ export default function ImageComponent({ src }: { src: string }) {
     }
   };
 
+  const hideType = () => {
+    setType(false);
+  };
+
   if (colors) {
     return (
       <main
@@ -86,7 +99,7 @@ export default function ImageComponent({ src }: { src: string }) {
       >
         <Image
           src={src}
-          alt={imgAlt}
+          alt={word}
           fill
           style={{ objectFit: 'contain' }}
           priority={true}
@@ -96,6 +109,9 @@ export default function ImageComponent({ src }: { src: string }) {
           <button type="button" onClick={goBack}>
             <FaArrowLeft className={styles.icon} />
           </button>
+          <button type="button" onClick={() => setType(!type)}>
+            <FiType className={styles.icon} style={{ strokeWidth: 4 }} />
+          </button>
           <button type="button" onClick={downloadImage}>
             <FaDownload className={styles.icon} />
           </button>
@@ -103,6 +119,8 @@ export default function ImageComponent({ src }: { src: string }) {
             <FaShare className={styles.icon} />
           </button>
         </article>
+
+        {type && <WordType hideType={hideType} word={word} />}
       </main>
     );
   }

@@ -1,0 +1,74 @@
+.typing {
+  position: absolute;
+  width: 100%;
+  max-width: 100vh;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.typingQuote {
+  font-weight: bold;
+}
+
+.typingWord {
+  width: 80%;
+  text-align: justify;
+  word-break: keep-all;
+  font-weight: 600;
+}
+
+.typingArea {
+  width: 80%;
+  background-color: transparent;
+  border: 1px solid black;
+  resize: none;
+  text-align: justify;
+  word-break: keep-all;
+  min-height: 62px;
+  line-height: 1.5;
+  max-height: 70vh;
+  box-sizing: content-box;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.typingArea::-webkit-scrollbar {
+  display: none;
+}
+
+.closeDetail {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background: transparent;
+  border: none;
+  width: 1.2rem;
+  height: 1.5rem;
+  padding: 0 2px;
+}
+
+.closeDetail:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.closeIcon {
+  width: 100%;
+  height: 100%;
+  color: #181818;
+}
+
+.copyBtn {
+  margin-left: 5px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.copyIcon {
+  color: dimgray;
+}

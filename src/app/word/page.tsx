@@ -1,10 +1,11 @@
 'use client';
 import ImageComponent from '@/app/component/ImageComponent.client';
-import { wordImages } from '@/app/data';
+import { wordInfo } from '@/app/data';
 import { useEffect, useState } from 'react';
 
 export default function Word() {
   const [imageUrl, setImageUrl] = useState('');
+  const [word, setWord] = useState('');
 
   useEffect(() => {
     function seededRandom(seed: number) {
@@ -18,10 +19,13 @@ export default function Word() {
       (currentDate.getMonth() + 1) * 100 +
       currentDate.getDate();
     const random = seededRandom(seed);
-    const index = Math.floor(random * wordImages.length);
+    const index = Math.floor(random * wordInfo.length);
 
-    setImageUrl(wordImages[index]);
+    const { link, word } = wordInfo[index];
+
+    setWord(word);
+    setImageUrl(link);
   }, []);
 
-  return <ImageComponent src={`/word${imageUrl}`} />;
+  return <ImageComponent src={`/word${imageUrl}`} word={word} />;
 }
