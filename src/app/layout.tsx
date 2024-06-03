@@ -45,6 +45,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="hiRUKgiCEnHr0E_06-wvBHmsENATk9b4x0dO5psDNPo"
         />
+        <meta
+          name="naver-site-verification"
+          content="142ba17f8726cbcbd20ef93b4ff8e355724adeb7"
+        />
       </Head>
       <body className={gowunDodum.className}>
         <Toaster
