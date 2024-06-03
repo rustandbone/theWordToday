@@ -3,6 +3,7 @@ import { Gowun_Dodum } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { WORD_URL, WORD_TITLE, WORD_DESCRIPTION } from '@/app/constants';
 import './globals.css';
+import Head from 'next/head';
 
 const gowunDodum = Gowun_Dodum({ weight: '400', subsets: ['latin'] });
 
@@ -39,6 +40,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="hiRUKgiCEnHr0E_06-wvBHmsENATk9b4x0dO5psDNPo"
+        />
+        <meta
+          name="naver-site-verification"
+          content="142ba17f8726cbcbd20ef93b4ff8e355724adeb7"
+        />
+      </Head>
       <body className={gowunDodum.className}>
         <Toaster
           toastOptions={{
