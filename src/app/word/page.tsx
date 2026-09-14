@@ -21,10 +21,17 @@ export default function Word() {
     const random = seededRandom(seed);
     const index = Math.floor(random * wordInfo.length);
 
-    const { link, word } = wordInfo[index];
+    const rawInfo = wordInfo[index];
 
-    setWord(word);
-    setImageUrl(link);
+    // 1. 한글 자모 분리 현상 방지를 위한 유니코드 NFC 정규화
+    const normalizedLink = rawInfo.link ? rawInfo.link.normalize('NFC') : '';
+    const normalizedWord = rawInfo.word ? rawInfo.word.normalize('NFC') : '';
+
+    // 2. URL 경로 내 한글 깨짐 및 특수문자 처리를 위한 URL 인코딩
+    const encodedLink = encodeURI(normalizedLink);
+
+    setWord(normalizedWord);
+    setImageUrl(encodedLink);
   }, []);
 
   return <ImageComponent src={`/word${imageUrl}`} word={word} />;
